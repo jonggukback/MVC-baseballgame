@@ -1,0 +1,100 @@
+/*
+		Model : 데이터와 관련된 부분
+		
+		MVC 패턴 Model 규칙
+  
+		Model 은 Controller 와 View 에 의존하지 않아야 한다,
+		Model 내부에 Controller 와 View 에 관련된 코드가 있으면 안된다.
+ */
+
+package baseballgame.ver2;
+
+import java.util.ArrayList;
+import java.util.Random;
+
+public class Model {
+
+	// 난수를 담을 배열 선언
+	private ArrayList<Integer> randomNumber_array = new ArrayList<Integer>();
+
+	// 사용자 입력값을 받을 변수 선언
+	private int inputData;
+
+	// inputData를 담을 배열 선언, 난수 배열과 인덱스 값 비교 예정
+	private ArrayList<Integer> inputData_array = new ArrayList<Integer>();
+
+	// 힌트에 사용되는 변수 선언
+	private int Strike;
+	private int Ball;
+	private int Out;
+
+	// 게임길이에 사용되는 변수 선언
+	private int Size;
+
+	// 중복 되지않는 변수를 randomNumber_array에 담아주는 생성자, 기본값은 3
+	public Model() {
+		this(3); // 게임의 기본길이는 3이다
+	}
+	
+	public Model(int size) {
+		Random random = new Random();
+		for (int i = 0; i < size; i++) {
+			randomNumber_array.add(i, random.nextInt(9) + 1);
+			for (int j = 0; j < i; j++) {
+				if (randomNumber_array.get(i) == randomNumber_array.get(j)) {
+					i--;
+				}
+			}
+		}
+	}
+
+	// 기본적인 getter, setter method 덩어리
+	public ArrayList<Integer> getRandomNumber_array() {
+		return randomNumber_array;
+	}
+
+	public void setRandomNumber_array(ArrayList<Integer> randomNumber_array) {
+		this.randomNumber_array = randomNumber_array;
+	}
+
+	public int getInputData() {
+		return inputData;
+	}
+
+	public void setInputData(int inputData) {
+		this.inputData = inputData;
+	}
+
+	public ArrayList<Integer> getInputData_array() {
+		return inputData_array;
+	}
+
+	public void setInputData_array(ArrayList<Integer> inputData_array) {
+		this.inputData_array = inputData_array;
+	}
+
+	public int getStrike() {
+		return Strike;
+	}
+
+	public void setStrike(int strike) {
+		Strike = strike;
+	}
+
+	public int getBall() {
+		return Ball;
+	}
+
+	public void setBall(int ball) {
+		Ball = ball;
+	}
+
+	public int getOut() {
+		return Out;
+	}
+
+	public void setOut(int out) {
+		Out = out;
+	}
+
+}

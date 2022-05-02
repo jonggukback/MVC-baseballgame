@@ -1,0 +1,22 @@
+/*	
+		Controller : Model과 View  두 사이를 이어주는 부분
+		
+		MVC 패턴 Controller 규칙
+   
+		Controller는 Model과 View에 의존해도 된다.
+		Controller 내부에는 Model과 View의 코드가 있을 수 있다.
+*/
+
+package baseballgame.ver2;
+
+public class Cotroller {
+
+	public static void main(String[] args) {
+		View view = new View();
+		Model model = new Model();
+		
+		
+		view.gamePlay(model,10,3);
+	}
+
+}
