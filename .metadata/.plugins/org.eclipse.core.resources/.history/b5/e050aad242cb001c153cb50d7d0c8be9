@@ -44,7 +44,6 @@ public class Model {
 			randomNumber_array.add(i, random.nextInt(9) + 1); // 0~9 사이의 변수
 			for (int j = 0; j < i; j++) { // 중복 검사
 				if (randomNumber_array.get(i) == randomNumber_array.get(j)) {
-					randomNumber_array.remove(i);
 					i--;
 				}
 			}
