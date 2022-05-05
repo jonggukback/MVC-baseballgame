@@ -1,0 +1,12 @@
+package lottogame.ver1;
+
+public class Test {
+
+	public static void main(String[] args) {
+
+		int num = 111;
+		System.out.println((num/4)*100);
+
+	}
+
+}

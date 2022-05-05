@@ -1,0 +1,9 @@
+package lottogame.ver1;
+
+public class Lottogame {
+
+	public void gameStart() {
+		
+	}
+	
+}

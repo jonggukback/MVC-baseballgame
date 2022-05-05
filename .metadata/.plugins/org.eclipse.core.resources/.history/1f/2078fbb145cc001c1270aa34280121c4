@@ -1,0 +1,31 @@
+package baseballgame.ver3;
+
+import java.util.ArrayList;
+import java.util.Random;
+
+public class BaseBallGameVO {
+
+	// 난수를 설정할 Random a
+	Random random = new Random();
+	
+	// 난수를 담을 배열 선언
+	private ArrayList<Integer> randomNumber_array = new ArrayList<Integer>();
+
+	// 사용자 입력값을 받을 변수 선언
+	private String inputData;
+
+	// inputData를 담을 배열 선언, 난수 배열과 인덱스 값 비교 예정
+	private ArrayList<Integer> inputData_array = new ArrayList<Integer>();
+
+	// 힌트에 사용되는 변수 선언
+	private int strike;
+	private int ball;
+	private int out;
+	
+	// 정답 기회에 사용되는 변수 선언
+	private int count;
+
+	// 난수의 개수에 사용되는 변수 선언
+	private int size;
+	
+}

@@ -1,0 +1,13 @@
+package lottogame.ver1;
+
+public class Test {
+
+	public static void main(String[] args) {
+
+		int a = 123;
+		int b = 10;
+		System.out.println(a/(float)b);
+
+	}
+
+}
